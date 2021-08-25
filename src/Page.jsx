@@ -54,9 +54,6 @@ const App = () => {
   return (
     <>
       <div style={{ height: "100vh", margin: "0 20% 0 20%" }}>
-        <Container textAlign="center">
-          <img src="/images/tt.png" alt="time table" style={ttStyle} />
-        </Container>
         <div>
           <Container>
             <Header as="h1" textAlign="center">
