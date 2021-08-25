@@ -45,7 +45,7 @@ const App = () => {
     setLinks(Alllinks);
   };
 
-  const deleteit = (id) => deleteQuestion(id);
+  const deleteit = (id) => { deleteQuestion(id); fetchAvailaibleLinks(); }
 
   useEffect(() => {
     fetchAvailaibleLinks();
@@ -57,7 +57,7 @@ const App = () => {
         <div>
           <Container>
             <Header as="h1" textAlign="center">
-              All your class links
+              All your questions
             </Header>
             <Segment>
               <Grid stackable columns={1} padded>
@@ -74,7 +74,7 @@ const App = () => {
                         labelPosition="right"
                       />
                     </Link>
-                    <Button color="red" icon="trash" onClick={() => deleteit(link.id)} /> 
+                    <Button color="red" icon="trash" style={{ marginTop:"10px" }} onClick={() => deleteit(link.id)} /> 
                     </div>
                   ))}
                 </Grid.Column>
@@ -88,7 +88,7 @@ const App = () => {
                 <Button
                   Icon
                   floated="right"
-                  content="Add class Link"
+                  content="Add questions"
                   color="green"
                   icon="add"
                 />
